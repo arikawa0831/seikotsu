@@ -31,19 +31,64 @@
   <header class="l-header">
     <div class="l-header__logo">
       <a href="<?php echo home_url(); ?>/">
-        <img src="" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/public/img/logo.png" alt="">
       </a>
     </div>
     <div class="l-header__menu pc-only">
       <ul>
         <li>
-          <a href="<?php echo home_url(); ?>/concept">コンセプト</a>
+          <?php if(is_front_page()) { ?>
+          <a href="#area"></a>
+          <?php }else{ ?>
+          <a href="<?php echo home_url(); ?>#area"></a>
+          <?php } ?>
+        </li>
+        <li>
+          <a href="<?php echo home_url(); ?>/price"></a>
         </li>
       </ul>
+      <div class="l-header__menu__studio">
+        <a href="" target="_blank" rel="noopener noreferrer"></a>
+      </div>
     </div>
     <nav class="l-header-sp sp-only" id="l-header-sp">
       <div class="l-header-sp__menu">
-        <a href="<?php echo home_url(); ?>/concept/">コンセプト</a>
+        <ul>
+          <li>
+            <?php if(is_front_page()) { ?>
+            <a href="#area"></a>
+            <?php }else{ ?>
+            <a href="<?php echo home_url(); ?>#area"></a>
+            <?php } ?>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="noopener noreferrer"></a>
+          </li>
+          <li>
+            <a href="<?php echo home_url(); ?>/studio"></a>
+          </li>
+          <li>
+            <a href="<?php echo home_url(); ?>/woman"></a>
+          </li>
+          <li>
+            <a href="<?php echo home_url(); ?>/dance"></a>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="noopener noreferrer"></a>
+          </li>
+          <li>
+            <a href="<?php echo home_url(); ?>/martial"></a>
+          </li>
+          <li>
+            <a href="<?php echo home_url(); ?>/price"></a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="hamburger_btn sp-only" id="js-hamburger">

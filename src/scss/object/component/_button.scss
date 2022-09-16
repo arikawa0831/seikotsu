@@ -1,0 +1,58 @@
+.c-button {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 15px 0;
+  transition: .3s;
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 7px;
+    height: auto;
+  }
+
+  span {
+    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 0, $lineheight: 1.5);
+  }
+}
+
+
+.c-white-button {
+  background: $white;
+  border: 2px solid $white;
+
+  span {
+    color: $main-blue;
+  }
+
+
+  &:hover {
+    background: $main-blue;
+
+    span {
+      color: $white;
+    }
+
+    &::after {
+      content: '';
+      width: 6.79px;
+      height: 13px;
+      background: url(../img/arrow-white.png);
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      z-index: 1;
+    }
+
+  }
+
+}

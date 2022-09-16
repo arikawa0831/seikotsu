@@ -10,10 +10,13 @@
 // ===========================
 // Layout
 // ===========================
+@import 'layout/header';
 
 // ===========================
 // Object
 // ===========================
+@import 'object/component/slider';
+@import 'object/component/button';
 
 // ===========================
 // pages
