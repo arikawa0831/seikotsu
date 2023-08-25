@@ -2,57 +2,43 @@
   display: block;
   text-align: center;
   position: relative;
-  padding: 15px 0;
+  padding: 20px 0;
+  background: $main-color;
+  border: 2px solid $main-color;
+  border-radius: 50px;
   transition: .3s;
+  color: $white;
+  font-family: 'Josefin Sans', sans-serif;
 
-  img {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    width: 7px;
-    height: auto;
+  @include pc {
+    @include font($fontSize: 0.95rem, $weight: 500, $style: normal, $kerning: 0, $lineheight: 1);
   }
 
-  span {
-    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 0, $lineheight: 1.5);
+  &:hover {
+    background: $sub-color;
+    color: $main-color;
+    border-color: $sub-color;
   }
 }
 
+.c-button-orange {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 20px 0;
+  background: $point-color;
+  border: 2px solid $point-color;
+  border-radius: 50px;
+  transition: .3s;
+  color: $white;
+  font-family: 'Josefin Sans', sans-serif;
 
-.c-white-button {
-  background: $white;
-  border: 2px solid $white;
-
-  span {
-    color: $main-blue;
+  @include pc {
+    @include font($fontSize: 0.95rem, $weight: 500, $style: normal, $kerning: 0, $lineheight: 1);
   }
-
 
   &:hover {
-    background: $main-blue;
-
-    span {
-      color: $white;
-    }
-
-    &::after {
-      content: '';
-      width: 6.79px;
-      height: 13px;
-      background: url(../img/arrow-white.png);
-      background-size: cover;
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      z-index: 1;
-    }
-
+    background: $white;
+    color: $point-color;
   }
-
 }

@@ -1,0 +1,60 @@
+.l-pagenavi {
+  &__grid {
+    @include pc {
+      width: 85%;
+      margin: 0 auto;
+      max-width: 1100px;
+      padding: 20px 0;
+    }
+
+    @include sp {
+      padding: 20px;
+    }
+  }
+
+  &__back {
+    color: $main-color;
+    border-bottom: 1px solid $main-color;
+    position: relative;
+
+    @include pc {
+      @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1.25);
+      margin-right: 30px;
+    }
+
+    @include sp {
+      margin-right: 30px;
+      @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1.25);
+    }
+
+    &::after {
+      content: '＞';
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      color: $text-color;
+
+      @include pc {
+        @include font($fontSize: 0.75rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1.25);
+      }
+
+      @include sp {
+        @include font($fontSize: 0.75rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1.25);
+      }
+    }
+  }
+
+  &__now {
+
+    @include pc {
+      @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1.25);
+    }
+
+    @include sp {
+      @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1.25);
+    }
+  }
+}

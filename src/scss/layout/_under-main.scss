@@ -1,0 +1,78 @@
+.l-under-main {
+  &__grid {
+    @include pc {
+      width: 92.5%;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    @include sp {
+      width: 92.5%;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+  &__texts {
+    position: relative;
+
+    @include pc {
+      width: 18%;
+      margin-right: -10%;
+      z-index: 1;
+    }
+
+    @include sp {
+      width: 43%;
+      margin-right: -35%;
+      z-index: 1;
+    }
+
+    h1 {
+      span:first-child {
+        color: $main-color;
+        font-family: 'Josefin Sans', sans-serif;
+
+        @include pc {
+          @include font($fontSize: 1rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+        }
+
+        @include sp {
+          @include font($fontSize: 1rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 1.25);
+        }
+      }
+
+      span:last-child {
+        color: $main-color;
+        font-family: 'Josefin Sans', sans-serif;
+
+        @include pc {
+          @include font($fontSize: 2rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+        }
+
+        @include sp {
+          @include font($fontSize: 1.25rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 1.25);
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include pc {
+      width: 92%;
+    }
+
+    @include sp {
+      width: 92%;
+    }
+
+    img {
+      @include pc {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+  }
+}

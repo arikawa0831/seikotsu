@@ -1,5 +1,4 @@
 .l-header {
-  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,10 +7,10 @@
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 0 10px $shadow;
+  align-items: center;
 
   @include pc {
-    padding: 0 0 0 80px;
+    padding: 0 40px 0 80px;
   }
 
   @include sp {
@@ -19,10 +18,9 @@
   }
 
   &__logo {
-    line-height: 80px;
 
     @include pc {
-      width: 250px;
+      width: 200px;
     }
 
     @include sp {
@@ -46,11 +44,11 @@
 
       li {
         list-style: none;
-        margin-left: 20px;
+        margin-left: 30px;
 
         a {
           position: relative;
-          @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 0, $lineheight: 1.5);
+          @include font($fontSize: 14px, $weight: 400, $style: normal, $kerning: 0, $lineheight: 1.5);
           color: $text-color;
 
           &::after {
@@ -60,7 +58,7 @@
             bottom: -10px;
             width: 0%;
             height: 2px;
-            background: $text-color;
+            background: $main-color;
             z-index: 2;
             transition: all 0.4s;
           }
@@ -76,37 +74,28 @@
       }
     }
 
-    &__studio {
-      background: $main-blue;
+    &__book {
+      background: $main-color;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 45px;
+      padding: 15px 45px;
+      border: 1px solid $main-color;
+      border-radius: 50px;
+      transition: .3s;
+
+      &:hover {
+        background: $white;
+
+        a {
+          color: $main-color;
+        }
+      }
 
       a {
         position: relative;
-        @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 0, $lineheight: 1.5);
+        @include font($fontSize: 14px, $weight: 400, $style: normal, $kerning: 0, $lineheight: 1.5);
         color: $white;
-
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          width: 0%;
-          height: 2px;
-          background: $white;
-          z-index: 2;
-          transition: all 0.4s;
-        }
-
-        &:hover {
-          text-decoration: none;
-
-          &::after {
-            width: 100%;
-          }
-        }
       }
     }
   }

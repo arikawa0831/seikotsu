@@ -1,0 +1,33 @@
+.wp-pagenavi {
+  text-align: center;
+
+  .pages {
+    display: block;
+    text-align: center;
+    border: initial;
+    @include font($fontSize: 0.95rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+  }
+
+  .page,
+  .nextpostslink,
+  .previouspostslink {
+    @include font($fontSize: 0.95rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 1.75);
+    display: inline-block;
+    border: initial;
+    background: $main-color;
+    color: $white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+  .current {
+    @include font($fontSize: 0.95rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 1.75);
+    display: inline-block;
+    border: 1px solid $main-color;
+    color: $main-color;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+}

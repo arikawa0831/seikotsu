@@ -1,0 +1,170 @@
+.l-reserve {
+  &__grid {
+    @include pc {
+      width: 85%;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+
+    @include sp {
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: $main-color;
+      font-family: serif;
+
+      @include pc {
+        @include font($fontSize: 1.875rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+        margin: 1.5em 0;
+      }
+
+      @include sp {
+        @include font($fontSize: 1.5rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+        margin: 1.5em 0;
+      }
+    }
+
+    p {
+      text-align: center;
+
+      @include pc {
+        margin-bottom: 3em;
+        @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 2.25);
+      }
+
+      @include sp {
+        margin-bottom: 3em;
+        @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 2.25);
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+
+    span {
+      color: $main-color;
+    }
+
+    &__big {
+      font-family: 'Josefin Sans', sans-serif;
+      position: relative;
+
+      @include pc {
+        @include font($fontSize: 2.5rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+      }
+
+      @include sp {
+        @include font($fontSize: 2rem, $weight: 700, $style: normal, $kerning: 100, $lineheight: 2);
+      }
+
+      &::after {
+        content: '';
+        height: 3px;
+        width: 60px;
+        background: $main-color;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+
+        @include pc {
+          top: -60px;
+        }
+
+        @include sp {
+          top: -30px;
+        }
+      }
+    }
+
+    &__small {
+      @include pc {
+        @include font($fontSize: 1rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1);
+      }
+
+      @include sp {
+        @include font($fontSize: 1rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 1);
+      }
+    }
+  }
+
+  &__links {
+    @include pc {
+      display: flex;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s;
+
+      @include pc {
+        padding: 50px 0;
+        width: 50%;
+      }
+
+      @include sp {
+        padding: 20px 0;
+      }
+
+      &:hover {
+        background: $sub-color;
+
+        i {
+          color: $main-color;
+        }
+
+        span {
+          color: $main-color;
+        }
+      }
+    }
+
+    &__reserve {
+      background: $main-color;
+
+      .fa-calendar {
+        color: $white;
+        margin-right: 40px;
+      }
+
+      span {
+        color: $white;
+
+        @include pc {
+          @include font($fontSize: 1.25rem, $weight: 500, $style: normal, $kerning: 100, $lineheight: 1);
+        }
+
+        @include sp {
+          @include font($fontSize: 1.25rem, $weight: 500, $style: normal, $kerning: 100, $lineheight: 1);
+        }
+      }
+    }
+
+    &__price {
+      background: $back-color;
+
+      .fa-sheet-plastic {
+        color: $main-color;
+        margin-right: 40px;
+      }
+
+      span {
+        color: $main-color;
+
+        @include pc {
+          @include font($fontSize: 1.25rem, $weight: 500, $style: normal, $kerning: 100, $lineheight: 1);
+        }
+
+        @include sp {
+          @include font($fontSize: 1.25rem, $weight: 500, $style: normal, $kerning: 100, $lineheight: 1);
+        }
+      }
+    }
+  }
+}

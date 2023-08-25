@@ -1,0 +1,19 @@
+.p-feature {
+  @include pc {
+    padding-top: 112.5px;
+  }
+
+  @include sp {
+    padding-top: 84.5px;
+  }
+
+  &__reserve {
+    @include pc {
+      padding: 120px 0;
+    }
+
+    @include sp {
+      padding: 120px 0 100px;
+    }
+  }
+}

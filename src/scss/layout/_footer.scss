@@ -1,0 +1,130 @@
+.l-footer {
+  &__top {
+    background: $back-color;
+
+    &__grid {
+      @include pc {
+        width: 85%;
+        margin: 0 auto;
+        padding: 60px 0;
+        max-width: 800px;
+      }
+
+      @include sp {
+        padding: 40px 20px;
+      }
+    }
+
+    &__logo {
+      @include pc {
+        margin-bottom: 40px;
+      }
+
+      @include sp {
+        margin-bottom: 20px;
+      }
+
+      a {
+        display: block;
+        margin: 0 auto;
+
+        @include pc {
+          width: 300px;
+        }
+
+        @include sp {
+          width: 150px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__links {
+      border-top: 0.5px solid $main-color;
+
+      @include pc {
+        padding-top: 40px;
+      }
+
+      @include sp {
+        padding-top: 20px;
+      }
+
+      ul {
+        @include pc {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        li {
+          list-style: none;
+
+          @include pc {
+            margin: 0 20px;
+          }
+
+          @include sp {
+            padding: 5px 0;
+          }
+
+          a {
+            color: $text-color;
+            position: relative;
+
+            @include pc {
+              @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 2);
+            }
+
+            @include sp {
+              @include font($fontSize: 0.95rem, $weight: 400, $style: normal, $kerning: 100, $lineheight: 2);
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: -10px;
+              width: 0%;
+              height: 2px;
+              background: $main-color;
+              z-index: 2;
+              transition: all 0.4s;
+            }
+
+            &:hover {
+              text-decoration: none;
+
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  &__copy {
+    background: $main-color;
+
+    @include pc {
+      padding: 40px 0;
+    }
+
+    @include sp {
+      padding: 20px 0;
+    }
+
+    p {
+      text-align: center;
+      color: $white;
+      font-family: 'Josefin Sans', sans-serif;
+      @include font($fontSize: 12px, $weight: 400, $style: normal, $kerning: 0, $lineheight: 1.5);
+    }
+  }
+}

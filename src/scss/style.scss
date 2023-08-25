@@ -11,13 +11,25 @@
 // Layout
 // ===========================
 @import 'layout/header';
+@import 'layout/footer';
+@import 'layout/reserve';
+@import 'layout/menu';
+@import 'layout/under-main';
+@import 'layout/pagenavi';
+@import 'layout/sidebar';
 
 // ===========================
 // Object
 // ===========================
 @import 'object/component/slider';
 @import 'object/component/button';
+@import 'object/component/pagenation';
 
 // ===========================
 // pages
 // ===========================
+@import 'pages/front';
+@import 'pages/access';
+@import 'pages/news';
+@import 'pages/price';
+@import 'pages/feature';
